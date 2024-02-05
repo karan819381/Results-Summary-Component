@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+              Hanken: '',
+            },
+          extend: {
+            colors: {
+              // Primary
+              LightRed: "hsl(0, 100%, 67%)",
+              OrangeyYellow: "hsl(39, 100%, 56%)",
+              GreenTeal: "hsl(166, 100%, 37%)",
+              CobaltBlue: "hsl(234, 85%, 45%)",
+
+              // Neutral
+
+              White: "hsl(0, 0%, 100%)",
+              PaleBlue: "hsl(221, 100%, 96%)",
+              LightLavender: "hsl(241, 100%, 89%)",
+              DarkGrayBlue: "hsl(224, 30%, 27%)",
+
+              // Gradients
+
+              LightSlateBlueBackground: "hsl(252, 100%, 67%)",
+              LightRoyalBlueBackground: "hsl(241, 81%, 54%)",
+              VioletBlueCircle: "hsla(256, 72%, 46%, 1)",
+              PersianBlueCircle: "hsla(241, 72%, 46%, 0)",
+            },
+           
+          },
+        },
+      };
+    </script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body
+    class="w-full h-screen flex items-center justify-center flex-col font-["Hanken Grotesk", sans serif]"
+  >
+    <main class="w-[40rem] bg-White rounded-3xl flex shadow-md ">
+
+        <!-- Left Part -->
+      <section
+        class="w-1/2 bg-gradient-to-b from-LightSlateBlueBackground to-LightRoyalBlueBackground rounded-3xl flex justify-center flex-col items-center"
+      >
+        <section class="text-LightLavender text-xl font-bold my-8">Your Result</section>
+         <!-- Left Part Circle -->
+        <section class="w-[10rem] h-[10rem] bg-gradient-to-b from-VioletBlueCircle to-PersianBlueCircle rounded-full overflow-hidden flex justify-center flex-col items-center">
+          <h1 class="text-7xl text-White font-bold">76</h1>
+          <p class="text-LightLavender font-bold opacity-70 text-sm">of 100</p>
+        </section>
+        <section class="font-bold text-xl text-White mt-5 mb-4">Great</section>
+        <section class="text-center text-base text-LightLavender mb-8 px-11">You scored higher than 65% of the people who have taken these tests.</section>
+      </section>
+
+       <!-- Right Part -->
+      <section class="w-1/2 px-8">
+       <h3 class="text-DarkGrayBlue text-2xl font-bold tracking-tight my-7">Summary</h3>
+       <section class="flex flex-col justify-center gap-3 mb-6 ">
+        <section class="bg-[#FFF0F0] flex justify-between p-3 rounded-xl hover:border-2 border-[#FF5757]">
+          <span class="flex"><img class="" src="./assets/images/icon-reaction.svg" alt="icon-reaction">
+          Reaction</span>
+          <span><strong class="">80 </strong>/ 100</span>
+        </section>
+        <section class="bg-[#FFF8EB] flex justify-between p-3 rounded-xl hover:border-2 border-[#FFB01F]">
+          <span class="flex"><img src="./assets/images/icon-memory.svg" alt="icon-memory">Memory</span>
+          <span> <strong>92</strong> / 100</span>
+        </section>
+        <section class="bg-[#E8F9F5] flex justify-between p-3 rounded-xl hover:border-2 border-[#00BD91]">
+          <span class="flex"><img src="./assets/images/icon-verbal.svg" alt="icon-verbal">Verbal</span><span><strong>61</strong> / 100</span>
+          
+        </section>
+        <section class="bg-[#EAEBFB] flex justify-between p-3 rounded-xl hover:border-2 border-[#1125D4]">
+          <span class="flex"><img src="./assets/images/icon-visual.svg" alt="icon-visual">Visual</span>
+          <span><strong>72</strong> / 100</span>
+        </section>
+       </section>
+       <button class="w-full text-White bg-DarkGrayBlue text-bold hover:bg-gradient-to-b from-LightSlateBlueBackground to-LightRoyalBlueBackground rounded-full p-3">Continue</button>
+      </section>
+    </main>
+  </body>
+</html>
